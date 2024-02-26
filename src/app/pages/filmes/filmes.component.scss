@@ -1,0 +1,11 @@
+.main{
+    display: flex;
+    justify-content: center;
+
+    table{
+        min-width: 100vw;
+    }
+    mat-spinner{
+        min-height: 100vh;
+    }
+}

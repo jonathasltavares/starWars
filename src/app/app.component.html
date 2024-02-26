@@ -1,25 +1,21 @@
-<p>
-  <mat-toolbar>
-    <button
-      mat-icon-button
-      [matMenuTriggerFor]="menu"
-      aria-label="icon-button with menu icon"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>Search StarWars</span>
+<mat-toolbar>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Search StarWars</span>
 
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/" routerLinkActive="active">
-        Home
-      </button>
-      <button mat-menu-item routerLink="/filmes" routerLinkActive="active">
-        Filmes
-      </button>
-      <button mat-menu-item routerLink="/nave" routerLinkActive="active">
-        Nave
-      </button>
-    </mat-menu>
-  </mat-toolbar>
-</p>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/" routerLinkActive="active">Home</button>
+    <button mat-menu-item routerLink="/filmes" routerLinkActive="active">
+      Filmes
+    </button>
+    <button mat-menu-item routerLink="/nave" routerLinkActive="active">
+      Nave
+    </button>
+  </mat-menu>
+</mat-toolbar>
 <router-outlet />
