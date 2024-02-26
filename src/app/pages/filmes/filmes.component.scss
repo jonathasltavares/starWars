@@ -8,4 +8,9 @@
     mat-spinner{
         min-height: 100vh;
     }
+
+    .films{
+        display: flex;
+        flex-direction: column;
+    }
 }

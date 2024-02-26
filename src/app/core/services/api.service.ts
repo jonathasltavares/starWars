@@ -10,8 +10,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  getFilms() {
-    let url = `${this.api_url}/films`;
+  getFilms(title?: string) {
+    let url = `${this.api_url}/films?search=${title}`;
     return this.http.get<RespostaAPI<filmes[]>>(url);
   }
 }
