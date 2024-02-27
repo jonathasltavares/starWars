@@ -1,4 +1,4 @@
-import { Component, afterNextRender, afterRender, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ApiService } from '../../core/services/api.service';
 import { MatTable } from '@angular/material/table';
 import { MatTableModule } from '@angular/material/table';
@@ -6,7 +6,6 @@ import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { MatFormField } from '@angular/material/form-field';
 import { MatLabel } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatButton } from '@angular/material/button';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { filmes } from '../../shared/models/interface';
 
@@ -21,7 +20,6 @@ import { filmes } from '../../shared/models/interface';
     MatLabel,
     ReactiveFormsModule,
     MatInputModule,
-    MatButton,
   ],
   templateUrl: './filmes.component.html',
   styleUrl: './filmes.component.scss',

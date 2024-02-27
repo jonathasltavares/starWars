@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    justify-content: center;
+
+    table{
+        width: 98vw;
+    }
+    mat-spinner{
+        min-height: 100vh;
+    }
+
+    .films{
+        display: flex;
+        flex-direction: column;
+    }
+}

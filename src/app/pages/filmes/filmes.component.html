@@ -3,17 +3,19 @@
   <mat-spinner></mat-spinner>
   }@else{
   <div class="films">
-    <form [formGroup]="filterForm">
-      <mat-form-field>
-        <mat-label for="title">Buscar por título</mat-label>
-        <input
-          (input)="filterFilms($event)"
-          name="title"
-          matInput
-          formControlName="title"
-        />
-      </mat-form-field>
-    </form>
+    <div class="films">
+      <form [formGroup]="filterForm">
+        <mat-form-field>
+          <mat-label for="title">Buscar por título</mat-label>
+          <input
+            (input)="filterFilms($event)"
+            name="title"
+            matInput
+            formControlName="title"
+          />
+        </mat-form-field>
+      </form>
+    </div>
     <div class="films__page container">
       <table mat-table [dataSource]="films" class="mat-elevation-z8">
         <ng-container matColumnDef="title">

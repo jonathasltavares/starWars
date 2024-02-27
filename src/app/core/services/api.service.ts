@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { filmes, RespostaAPI } from '../../shared/models/interface';
+import { filmes, Nave, RespostaAPI } from '../../shared/models/interface';
 
 @Injectable({
   providedIn: 'root',
@@ -13,5 +13,10 @@ export class ApiService {
   getFilms() {
     let url = `${this.api_url}/films`;
     return this.http.get<RespostaAPI<filmes[]>>(url);
+  }
+
+  getNaves() {
+    let url = `${this.api_url}/starships`;
+    return this.http.get<RespostaAPI<Nave[]>>(url);
   }
 }

@@ -1,1 +1,51 @@
-<p>nave works!</p>
+<div class="main">
+  @if(loading()){
+  <mat-spinner></mat-spinner>
+  }@else{
+  <div class="naves">
+    <form [formGroup]="filterForm">
+      <mat-form-field>
+        <mat-label for="title">Buscar por título</mat-label>
+        <input
+          (input)="filterNaves($event)"
+          name="title"
+          matInput
+          formControlName="title"
+        />
+      </mat-form-field>
+    </form>
+    <div class="naves__page container">
+      <table mat-table [dataSource]="naves" class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Nome</th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
+        <ng-container matColumnDef="model">
+          <th mat-header-cell *matHeaderCellDef>Modelo</th>
+          <td mat-cell *matCellDef="let element">{{ element.model }}</td>
+        </ng-container>
+        <ng-container matColumnDef="starship class">
+          <th mat-header-cell *matHeaderCellDef>Classe da nave</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.starship_class }}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="crew">
+          <th mat-header-cell *matHeaderCellDef>Tripulantes</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.crew }}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="passengers">
+          <th mat-header-cell *matHeaderCellDef>Passageiros</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.passengers }}
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+        <tr mat-row *matRowDef="let row; columns: colunas"></tr>
+      </table>
+    </div>
+  </div>
+  }
+</div>
